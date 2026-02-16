@@ -1,0 +1,138 @@
+.Beliefs {
+  position: relative;
+}
+
+.containerfor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Centerrr {
+  justify-content: flex-start; 
+  padding: 25px;
+}
+
+.Centerrr img {
+  object-fit: cover;
+}
+
+.aboutwhat {
+  display: flex;
+  position: absolute;
+  top: 30px;
+  right: 70px; 
+  font-size: 24px;
+  color: #fff;
+  font-family: 'Playfair Display', serif; 
+  font-style: italic;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.title {
+  position: absolute;  
+  top: 15%;      
+  left: 35%;  
+  transform: translate(-50%, -50%);
+  font-size: 100px;     
+  font-weight: 100;
+  color: #fff;       
+  font-family: 'Playfair Display', serif;
+  word-spacing: 10px;
+  white-space: nowrap; 
+  letter-spacing: 0.04em;
+  z-index: 10;
+}
+
+.title span {
+  display: block;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.descriptionBeliefs {
+  color: #fff; 
+  font-size: 20px;
+  letter-spacing: 0.06em; 
+  margin-top: 50px;
+  white-space: pre-line;
+  position: absolute; 
+  top: 55%;      
+  left: 70%; 
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.moredescription {
+  font-weight: 100; 
+}
+
+.buttonBel {
+  margin-top: 20px;
+  color: #000;
+  background-color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  padding: 8px 10px; 
+  border-radius: 999px; 
+}
+
+.buttonBel:hover {
+  background: #121617;
+  color: #fff;
+  transition: all 0.5s ease; 
+}
+
+.image-wrapper2 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.image-wrapper2 img {
+  width: 780px;
+  height: 880px; 
+  display: block;
+  z-index: 1;
+}
+
+.image-wrapper2 .panel2 {
+  position: absolute;
+  top: 0;                 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121617;
+  transform-origin: top;  
+  transform: scaleY(1);   
+  transition: transform 2.5s ease-in-out;
+  z-index: 2;
+}
+
+.image-wrapper2.open .panel2 {
+  transform: scaleY(0);
+
+}
+
+.visible {
+  animation: reveal-text 0.8s forwards;
+}
+
+.aboutwhat.visible { animation-delay: 0s; }
+
+.title.visible span:nth-of-type(1) { animation-delay: 0.2s; }
+.title.visible span:nth-of-type(2) { animation-delay: 0.5s; }
+.title.visible span {
+  animation: reveal-text 0.8s forwards;
+}
+
+.descriptionBeliefs.visible { animation-delay: 0.8s; }
+.descriptionBeliefs.visible .buttonBel { animation-delay: 1.1s; }
+
+@keyframes reveal-text {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

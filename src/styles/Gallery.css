@@ -1,0 +1,185 @@
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Контейнер галереї */
+.CarouselContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  height: 100vh; 
+  overflow: visible;
+  position: relative; 
+}
+
+.carousel {
+  position: relative;
+  width: 1200px;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+/* Картинки */
+.CarouselImg {
+  position: absolute;
+  width: 500px;  
+  height: 700px;
+  border-radius: 15px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 1;
+  top: 0;
+}
+
+.center {
+  transform: translateX(0) translateY(0) scale(1); 
+  opacity: 1;
+  z-index: 2;
+}
+
+.left {
+  transform: translateX(-750px) translateY(50px) scale(0.8);
+  opacity: 1;
+  z-index: 1;
+}
+
+.right {
+  transform: translateX(750px) translateY(50px) scale(0.8);
+  opacity: 1;
+  z-index: 1;
+}
+
+.ExitLeft {
+  transform: translateX(-800px) translateY(50px) scale(0.8);
+  opacity: 0;
+}
+
+.MoveLeft {
+  transform: translateX(-750px) translateY(50px) scale(0.8);
+  opacity: 1;
+}
+
+.MoveCenter {
+  transform: translateX(0) translateY(0) scale(1); 
+  opacity: 1;
+}
+
+.EnterRight {
+  transform: translateX(700px) translateY(50px) scale(0.8);
+  opacity: 0;
+  animation: enterRight 0.5s forwards;
+  z-index: 1;
+}
+
+@keyframes enterRight {
+  from {
+    transform: translateX(800px) translateY(50px) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(750px) translateY(50px) scale(0.8);
+    opacity: 1;
+  }
+}
+
+/* Заголовки і центральний текст */
+.CarouselTitle,
+.CarouselCenterTitle {
+  position: absolute;
+  opacity: 0;
+}
+
+.CarouselTitle {
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: #fff;
+  font-style: italic;
+  display: flex; 
+  justify-content: space-between;
+  right: 70px;   
+}
+
+.Number {
+  display: flex;
+  gap: 40px; 
+}
+
+
+body { overflow-x: hidden; }
+
+
+.CarouselCenterTitle {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-weight: 100;
+  color: #fff;
+  text-align: center;
+  z-index: 10;
+  font-family: 'Playfair Display', serif;
+  word-spacing: 10px;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.CarouselFooter {
+  display: flex; 
+  flex-direction: row;     
+  align-items: center; 
+  margin-top: -100px;          
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.MoreText {
+  font-weight: 100;
+  font-size: 18px;            
+  color: #fff;                  
+  line-height: 1.5; 
+  white-space: pre-line;
+}
+
+.buttonn {
+  color: #000;
+  background-color: #fff;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  padding: 8px 10px; 
+  border-radius: 999px;
+  margin-left: 20px;
+}
+
+.buttonn:hover {
+  background: #121617;
+  color: #ffffff;
+  transition: all 0.5s ease; 
+}
+
+.CarouselCenterTitle span {
+  display: block;
+  opacity: 0;
+  transform: translateY(30px); 
+}
+
+.CarouselCenterTitle.visible span {
+  animation: reveal-text 0.8s forwards;
+}
+
+.CarouselCenterTitle.visible span:nth-of-type(1) { animation-delay: 0s; }
+.CarouselCenterTitle.visible span:nth-of-type(2) { animation-delay: 0.3s; }
+
+@keyframes reveal-text {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

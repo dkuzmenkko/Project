@@ -1,0 +1,77 @@
+.allNumber {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    ". percent number"
+    "thousands . ."
+    ". time .";
+  padding: 50px 40px;
+  color: white;
+  gap: 20px 140px; 
+}
+
+
+.thousands {
+  grid-area: thousands;
+  justify-self: start; 
+}
+
+.percent {
+  grid-area: percent;
+  justify-self: end; 
+}
+
+.number {
+  grid-area: number;
+  justify-self: start;
+  padding-right: 290px;
+}
+
+.time {
+  grid-area: time;
+  justify-self: end;
+}
+
+
+.allNumber p {
+  font-size: 20px;
+  margin: 6px 0 0;
+  max-width: 280px;
+  line-height: 1.4;
+  opacity: 0.85;
+}
+
+.allNumber h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(100px, 9vw, 200px);
+  font-weight: 300;
+  margin: 0;
+}
+
+
+
+.percent h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.unit {
+  font-size:  50px;  
+  font-weight: 100;
+  letter-spacing: 0.08em;
+}
+
+.thousands, .percent, .number, .time {
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.allNumber.fade-in .thousands,
+.allNumber.fade-in .percent,
+.allNumber.fade-in .number,
+.allNumber.fade-in .time {
+  opacity: 1;
+  transform: translateY(0);
+}
