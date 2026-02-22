@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Project/static/css/main.1f44cb88.css",
+    "main.js": "/Project/static/js/main.102d51b3.js",
+    "static/js/453.915c8365.chunk.js": "/Project/static/js/453.915c8365.chunk.js",
+    "static/media/LivingRoom.jpg": "/Project/static/media/LivingRoom.3056d387bfcc621461b6.jpg",
+    "static/media/Fintness.png": "/Project/static/media/Fintness.1b9ab0c14446c80aee49.png",
+    "static/media/BackgroundTwo.jpg": "/Project/static/media/BackgroundTwo.520c160751e367af2fcc.jpg",
+    "static/media/Galllery3.png": "/Project/static/media/Galllery3.3300606e5391b589c52b.png",
+    "static/media/FitnessBack.jpg": "/Project/static/media/FitnessBack.b68c9a586da0036b1680.jpg",
+    "static/media/cottage.jpg": "/Project/static/media/cottage.5cb70d6dd6c34b2fab71.jpg",
+    "static/media/Galllery1.webp": "/Project/static/media/Galllery1.df4eb755a09eb0d353f5.webp",
+    "static/media/Galllery2.jpg": "/Project/static/media/Galllery2.74f35c368a51d2e78d9d.jpg",
+    "index.html": "/Project/index.html",
+    "main.1f44cb88.css.map": "/Project/static/css/main.1f44cb88.css.map",
+    "main.102d51b3.js.map": "/Project/static/js/main.102d51b3.js.map",
+    "453.915c8365.chunk.js.map": "/Project/static/js/453.915c8365.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f44cb88.css",
+    "static/js/main.102d51b3.js"
+  ]
+}
