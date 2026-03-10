@@ -15,7 +15,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub
+            GitHub Repository
           </a>
 
           <a
@@ -23,7 +23,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Original Design
+           Original Design (Dribbble)
           </a>
         </div>
       </div>
